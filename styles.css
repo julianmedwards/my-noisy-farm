@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 10px;
+    background-color: black;
+}
+
+.bg {
+    position: relative;
+    background-image: url('img/bliss.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1300px;
+    height: 730px;
+}
+
+.animal {
+    position: absolute;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+#chicken:active,
+#pig:active,
+#cow:active,
+#horse:active {
+    transform: rotate(5deg);
+}
+
+#chicken {
+    position: relative;
+    width: 80px;
+    top: 500px;
+    left: 200px;
+}
+#pig {
+    position: relative;
+    top: 420px;
+    left: 300px;
+}
+#cow {
+    position: relative;
+    top: 330px;
+    left: 350px;
+}
+#horse {
+    position: relative;
+    top: 340px;
+    left: 500px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="bg">
+          <!-- <img class="bg" src="img/bliss.jpg" /> -->
+          <img
+            id="chicken"
+            data-key="chicken-aud"
+            class="animal"
+            src="img/animals/chicken-vector.jpg"
+          />
+          <audio data-pair="chicken-aud" src="audio/chicken.wav"></audio>
+          <img
+            data-key="pig-aud"
+            id="pig"
+            class="animal"
+            src="img/animals/pig-vector.png"
+          />
+          <audio data-pair="pig-aud" src="audio/pig.mp3"></audio>
+          <img
+            id="cow"
+            data-key="cow-aud"
+            class="animal"
+            src="img/animals/cow-vector.png"
+          />
+          <audio data-pair="cow-aud" src="audio/cow.wav"></audio>
+          <img
+            id="horse"
+            data-key="horse-aud"
+            class="animal"
+            src="img/animals/horse-vector.png"
+          />
+          <audio data-pair="horse-aud" src="audio/horse.wav"></audio>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    let animals = document.getElementsByClassName('animal')
+    for (let animal of animals) {
+      animal.addEventListener('click', function () {
+        let audio = animal.getAttribute('data-key')
+        document.querySelector(`audio[data-pair="${audio}"]`).play()
+      })
+    }
+
+    // let animals = [
+    //   (chicken = document.getElementById('chicken')),
+    //   (pig = document.getElementById('pig')),
+    //   (cow = document.getElementById('cow')),
+    //   (horse = document.getElementById('horse')),
+    // ]
+    // console.log(animals)
+    // let audio = [
+    //   (chicken = document.querySelector('chicken-aud')),
+    //   (pig = document.querySelector('pig-aud')),
+    //   (cow = document.querySelector('cow-aud')),
+    //   (horse = document.querySelector('horse-aud')),
+    // ]
+    // }
+  </script>
+</html>
